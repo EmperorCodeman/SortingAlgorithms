@@ -1,6 +1,7 @@
 """Selection sort selects a element then iterates till selected compares less then and swaps, at end of each
 inner loop selected element is appended to ordered list and so on
 Forms show O(n**2) but I think it should be O(!n-1)
+https://www.youtube.com/watch?v=92BfuxHn2XE
 """
 def SelectionSort(collection, tabulations):
     id = "selectionSort"
