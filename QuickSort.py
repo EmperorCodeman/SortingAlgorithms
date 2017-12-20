@@ -16,6 +16,8 @@ def QuickSort(collection, tabulations, id="quickSort"):
     collectionMinusPivot = collection[:size-1]
     lessThenPivot, greaterThenPivot = [],[]
     for element in collectionMinusPivot:
+        tabulations[id]["comparisons"] += 1
+        tabulations[id]["swaps"] += 1
         if element < pivot:
             lessThenPivot.append(element)
         else:
@@ -25,6 +27,7 @@ def QuickSort(collection, tabulations, id="quickSort"):
     greaterThenPivot = QuickSort(greaterThenPivot, tabulations, id)
     return lessThenPivot + [pivot] + greaterThenPivot
 def ModifiedQuickSort(collection, tabulations):
+    #used for testing semi ordered data
     tabulations["modifiedQuickSort"]["comparisons"] += 1
     if len(collection) > 1:
         midPoint = collection.__len__() // 2
